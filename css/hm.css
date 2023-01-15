@@ -10,27 +10,27 @@
   animation: stroke 6s infinite linear;
 }
 .text:nth-child(5n + 1) {
-  stroke: #f2385a;
+  stroke: #1e2513;
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 }
 .text:nth-child(5n + 2) {
-  stroke: #f5a503;
+  stroke: #15381a;
   -webkit-animation-delay: -2.4s;
   animation-delay: -2.4s;
 }
 .text:nth-child(5n + 3) {
-  stroke: #e9f1df;
+  stroke: #4c6603;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
 .text:nth-child(5n + 4) {
-  stroke: #56d9cd;
+  stroke: #c09b92;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
 .text:nth-child(5n + 5) {
-  stroke: #3aa1bf;
+  stroke: #fff1ee;
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
 }
