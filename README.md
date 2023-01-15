@@ -1,3 +1,3 @@
 # Hidden Moss
 
-Hidden Moss Home Page: https://hiddenmoss.com/
+🔗 [hiddenmoss.com](https://hiddenmoss.com)
