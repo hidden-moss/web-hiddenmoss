@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3ZXFK9CRG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-M3ZXFK9CRG");
-    </script>
     <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Hidden Moss" />
     <meta name="keywords" content="Hidden, Moss, game, maker, Chicago, Shanghai" />
-    <link rel="stylesheet" href="css/hm.css" />
     <title>Hidden Moss</title>
+    <link rel="stylesheet" href="css/hm.css" />
+    <script>
+      document.documentElement.classList.add("js");
+      window.logoLoadTimeout = setTimeout(() => {
+        if (!document.querySelector("hiddenmoss-identity[data-ready='true']"))
+          document.documentElement.classList.add("fallback");
+      }, 10000);
+    </script>
+    <script type="module" src="main.mjs"></script>
+    <!-- Existing site analytics. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3ZXFK9CRG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-M3ZXFK9CRG");
+    </script>
   </head>
   <body>
-    <svg viewBox="0 0 600 300">
-      <!-- Symbol-->
-      <symbol id="s-text">
-        <text text-anchor="middle" x="50%" y="50%" dy=".35em">Hidden Moss</text>
-      </symbol>
-      <!-- Duplicate symbols-->
-      <a href="https://github.com/hidden-moss">
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-      </a>
-    </svg>
+    <main aria-label="Hidden Moss">
+      <div class="identity-stage">
+        <img class="static-logo" src="logo-static.svg" alt="Hiddenmoss" width="1024" height="640" />
+        <hiddenmoss-identity autoplay></hiddenmoss-identity>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/hidden-moss" aria-label="Hidden Moss on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+      <button id="motion-toggle" type="button" hidden>Pause motion</button>
+    </footer>
   </body>
 </html>

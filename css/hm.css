@@ -1,72 +1,20 @@
-/* Main styles */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-.text {
-  fill: none;
-  stroke-width: 3;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 6s infinite linear;
-  transition: all 0.8s linear;
-}
-.text:nth-child(5n + 1) {
-  stroke: #073b3a;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: #0b6e4f;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
-}
-.text:nth-child(5n + 3) {
-  stroke: #08a045;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
-}
-.text:nth-child(5n + 4) {
-  stroke: #6bbf59;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
-}
-.text:nth-child(5n + 5) {
-  stroke: #ddb771;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
-}
-.text:hover:nth-child(5n + 5) {
-  stroke: #e07ece;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
-}
-
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-/* Other styles */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: #111;
-  background-size: 0.2em 100%;
-  font: 5em/1 Open Sans, Impact;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+/* The canvas, page and fallback share a true black background. */
+:root { color-scheme: dark; background: #000000; color: #efefe6; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-width: 280px; min-height: 100%; background: #000000; }
+body { min-height: 100svh; }
+main { min-height: 100svh; display: grid; place-items: center; padding: 40px 24px 60px; }
+.identity-stage { position: relative; width: min(100%, 1120px, calc((100svh - 100px) * 1.6)); aspect-ratio: 1024 / 640; }
+hiddenmoss-identity, .static-logo { position: absolute; inset: 0; width: 100%; height: 100%; }
+hiddenmoss-identity { display: none; background: #000000; }
+.js hiddenmoss-identity { display: block; }
+.js .static-logo { visibility: hidden; }
+.fallback hiddenmoss-identity { display: none; }
+.fallback .static-logo { visibility: visible; }
+footer { position: fixed; inset: auto max(28px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+a, button { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; color: #a3a39e; font-size: 12px; line-height: 1.5; letter-spacing: .02em; text-decoration: none; }
+button { font-family: inherit; border: 0; padding: 0; background: transparent; cursor: pointer; }
+a:hover, button:hover { color: #efefe6; }
+a:focus-visible, button:focus-visible { outline: 1px solid #efefe6; outline-offset: 6px; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) { main { padding-inline: 4px; } footer { left: 20px; right: 20px; } }
