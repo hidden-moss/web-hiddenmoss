@@ -7,15 +7,15 @@
     <meta name="description" content="Hidden Moss" />
     <meta name="keywords" content="Hidden, Moss, game, maker, Chicago, Shanghai" />
     <title>Hidden Moss</title>
-    <link rel="stylesheet" href="css/identity.css" />
+    <link rel="stylesheet" href="css/field.css" />
     <script>
       document.documentElement.classList.add("js");
       window.logoLoadTimeout = setTimeout(() => {
-        if (!document.querySelector("hiddenmoss-identity[data-ready='true']"))
+        if (!document.querySelector("hiddenmoss-field[data-ready='true']"))
           document.documentElement.classList.add("fallback");
       }, 10000);
     </script>
-    <script type="module" src="main.mjs"></script>
+    <script type="module" src="field-page.mjs"></script>
     <!-- Existing site analytics. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3ZXFK9CRG"></script>
     <script>
@@ -29,8 +29,8 @@
     <main aria-label="Hidden Moss">
       <div class="identity-stage">
         <img class="static-logo" src="logo-static.svg" alt="Hiddenmoss" width="1024" height="640" />
-        <hiddenmoss-identity autoplay></hiddenmoss-identity>
       </div>
+      <hiddenmoss-field autoplay></hiddenmoss-field>
     </main>
     <footer>
       <a href="https://github.com/hidden-moss" aria-label="Hidden Moss on GitHub">GitHub <span aria-hidden="true">↗</span></a>
