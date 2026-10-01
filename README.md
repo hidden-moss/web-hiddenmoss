@@ -2,7 +2,7 @@
 
 [hiddenmoss.com](https://hiddenmoss.com)
 
-A dependency-free static homepage on pure black. The 1,750-point logo grows once, then breathes continuously. Hover gently attracts nearby points; clicking adds a fading ripple. The footer includes a pause/resume control and the original GitHub link.
+A dependency-free static homepage on pure black. The 1,750-point logo grows once, then breathes continuously over a full-screen tiny-dot background aligned to the same original lattice. Background dots use the approved 3.3× size, shrink to zero at the contraction low point, and gently return as the logo expands. Hover gently attracts nearby points; clicking adds a fading ripple. The footer includes a pause/resume control and the original GitHub link.
 
 ## Selected motion
 
@@ -33,3 +33,5 @@ GitHub Pages serves the root of `gh-pages`, with `hiddenmoss.com` configured by 
 The original Google Analytics ID and GitHub destination are retained. No third-party fonts or animation libraries are required.
 
 Motion source: `org-logo` commit `c74cb81c07685e1c135b82409e34a811b949b45a`. The four files under `motion/` are copied unchanged from that version; matching regression tests are included here.
+
+Full-screen field source: `org-logo` commit `602dcf1`. `field/geometry.mjs` and `field/profile.mjs` are copied unchanged; `field/field.mjs` uses the same component with English accessibility/error text and no study-page controls. Both layers share one canvas, clock and pointer interaction. Background size is fixed at 3.3× in `field-page.mjs`. The original motion files remain unchanged.
