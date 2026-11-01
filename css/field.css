@@ -13,9 +13,7 @@ hiddenmoss-field { display: none; background: #000000; }
 .fallback hiddenmoss-field { display: none; }
 .fallback .static-logo { visibility: visible; }
 footer { position: fixed; inset: auto max(28px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-a, button { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; color: #a3a39e; font-size: 12px; line-height: 1.5; letter-spacing: .02em; text-decoration: none; }
-button { font-family: inherit; border: 0; padding: 0; background: transparent; cursor: pointer; }
-a:hover, button:hover { color: #efefe6; }
-a:focus-visible, button:focus-visible { outline: 1px solid #efefe6; outline-offset: 6px; }
-[hidden] { display: none !important; }
+a { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; color: #a3a39e; font-size: 12px; line-height: 1.5; letter-spacing: .02em; text-decoration: none; }
+a:hover { color: #efefe6; }
+a:focus-visible { outline: 1px solid #efefe6; outline-offset: 6px; }
 @media (max-width: 600px) { main { padding-inline: 4px; } footer { left: 20px; right: 20px; } }

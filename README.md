@@ -2,7 +2,7 @@
 
 [hiddenmoss.com](https://hiddenmoss.com)
 
-A dependency-free static homepage on pure black. The 1,750-point logo grows once, then breathes continuously over a full-screen tiny-dot background aligned to the same original lattice. Background dots use the approved 3.3× size, shrink to zero at the contraction low point, and gently return as the logo expands. Hover gently attracts nearby points; clicking adds a fading ripple. The footer includes a pause/resume control and the original GitHub link.
+A dependency-free static homepage on pure black. The 1,750-point logo grows once, then breathes continuously over a full-screen tiny-dot background aligned to the same original lattice. Background dots use the approved 3.3× size, shrink to zero at the contraction low point, and gently return as the logo expands. Hover gently attracts nearby points; clicking adds a fading ripple. The footer contains the original GitHub link.
 
 ## Selected motion
 
@@ -15,7 +15,7 @@ The owner selected these motion studies on 2026-09-30:
 | 06 Magnet | 0.25× | 30% | Gentle attraction and subtle radius pulse |
 | 08 Echo | 1× | 85% | Click/tap ripple |
 
-The component freezes while offscreen or in a background tab. Pause/resume retains its position. Reduced-motion users receive the completed static logo and may explicitly play it. A static SVG remains available if JavaScript or the source request fails. Page and canvas backgrounds are `#000000`; dots are `#efefe6`.
+The component freezes while offscreen or in a background tab. Reduced-motion users receive the completed static logo. A static SVG remains available if JavaScript or the source request fails. Page and canvas backgrounds are `#000000`; dots are `#efefe6`.
 
 ## Local development
 
